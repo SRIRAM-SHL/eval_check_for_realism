@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>25-Question Evaluator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/styles.css" />
+  <link rel="stylesheet" href="/static/eval.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">JQ</div>
+        <div class="brand-text">
+          <h1>Question Judge</h1>
+          <span>LLM-as-Judge Evaluator</span>
+        </div>
+      </div>
+
+      <nav class="steps">
+        <div class="step" data-step="1"><span class="dot">1</span> Upload question file</div>
+        <div class="step" data-step="2"><span class="dot">2</span> Evaluate</div>
+        <div class="step" data-step="3"><span class="dot">3</span> Review &amp; export</div>
+      </nav>
+
+      <div class="status-card">
+        <div class="status-row"><span>Model</span><strong id="modelName">&mdash;</strong></div>
+        <div class="status-row"><span>LLM</span><strong id="llmStatus" class="pill">checking&hellip;</strong></div>
+      </div>
+
+      <footer class="side-foot">
+        Judges each question for realism, intent &amp; flags &mdash; one at a time.
+      </footer>
+    </aside>
+
+    <main class="content">
+      <header class="topbar">
+        <div>
+          <h2>Evaluate candidate questions</h2>
+          <p class="subtitle">Upload a text file of questions. Each is judged on how realistically a candidate would ask it at the end of an interview.</p>
+        </div>
+      </header>
+
+      <section class="grid">
+        <!-- LEFT: controls -->
+        <div class="panel controls">
+          <label class="field-label">Question file (.txt)</label>
+          <div id="dropzone" class="dropzone">
+            <input type="file" id="fileInput" accept=".txt,.md,.csv" hidden />
+            <div class="dz-inner">
+              <div class="dz-icon">+</div>
+              <p class="dz-title">Drag &amp; drop or <span>browse</span></p>
+              <p class="dz-hint">A .txt list of questions (numbered, bulleted, or one per line)</p>
+            </div>
+          </div>
+          <ul id="fileList" class="file-list"></ul>
+
+          <div id="parsedCard" class="capacity-card hidden">
+            <div class="cap-top">
+              <div>
+                <span class="cap-num" id="parsedCount">0</span>
+                <span class="cap-label">questions detected</span>
+              </div>
+            </div>
+          </div>
+
+          <label class="field-label" style="margin-top:16px;">Job description <span style="opacity:.6;font-weight:400;">(optional &mdash; makes judging role-aware)</span></label>
+          <div id="jdDropzone" class="dropzone">
+            <input type="file" id="jdInput" accept=".docx,.pdf,.txt,.md" hidden />
+            <div class="dz-inner">
+              <div class="dz-icon">+</div>
+              <p class="dz-title">Drag &amp; drop or <span>browse</span> the JD</p>
+              <p class="dz-hint">.docx .pdf .txt .md &mdash; we detect the role automatically</p>
+            </div>
+          </div>
+          <ul id="jdList" class="file-list"></ul>
+          <div id="roleCard" class="capacity-card hidden">
+            <div class="cap-top">
+              <div>
+                <span class="cap-label">Detected role</span>
+                <span class="cap-num" id="roleName" style="font-size:18px;display:block;">&mdash;</span>
+                <span class="cap-label" id="roleFocus"></span>
+              </div>
+            </div>
+          </div>
+
+          <button id="evaluateBtn" class="btn-primary" disabled>
+            <span class="btn-label">Evaluate questions</span>
+            <span class="spinner hidden"></span>
+          </button>
+
+          <div id="progressWrap" class="progress-wrap hidden">
+            <div class="progress-bar"><div id="progressFill" class="progress-fill"></div></div>
+            <p id="progressText" class="range-note"></p>
+          </div>
+
+          <div id="errorBox" class="error-box hidden"></div>
+        </div>
+
+        <!-- RIGHT: results -->
+        <div class="panel results">
+          <div class="results-head">
+            <div>
+              <h3 id="resultsTitle">Results</h3>
+              <p id="resultsMeta" class="results-meta">Your evaluation will appear here.</p>
+            </div>
+            <div class="results-actions">
+              <button id="exportJsonBtn" class="btn-ghost hidden">Export JSON</button>
+              <button id="exportCsvBtn" class="btn-ghost hidden">Export CSV</button>
+            </div>
+          </div>
+
+          <div id="summary" class="summary hidden"></div>
+
+          <div id="emptyState" class="empty-state">
+            <div class="empty-illustration">?</div>
+            <p>No results yet</p>
+            <span>Upload a file and click <strong>Evaluate questions</strong>.</span>
+          </div>
+
+          <ul id="qaList" class="qa-list"></ul>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+  <script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+1. Is this role hybrid or fully remote?
+2. What are the coding and testing standards expected in this role?
+3. Where is the company headquartered?
+4. Who must follow the Code of Conduct?
+5. What does a typical day look like for someone in this position?
+6. How is success measured for this role in the first six months?
+7. What is the salary range for this level?
+8. What are the company's four core values?
+9. How large is the engineering team I would be joining?
+10. What technologies and tools does the team use day to day?
+11. What do you personally enjoy most about working here?
+12. What are the next steps in the interview process?
+13. In which year was the company founded?
+14. How does the team handle on-call and after-hours support?
+15. What growth or promotion paths are available from this role?
+16. How would you describe the team's working culture?
+17. What is the company's stock ticker symbol?
+18. What are the biggest challenges the team is facing right now?
+19. Does the company support mental health and wellbeing?
+20. What is the company's annual revenue?
+21. How much of the role involves working with REST APIs and microservices?
+22. What does the onboarding process look like for new engineers?
+23. Who is required to complete the annual compliance training?
+24. What motivated you to join this company?
+25. How does the team approach diversity and inclusion?

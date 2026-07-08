@@ -1,0 +1,270 @@
+{
+  "aggregate": {
+    "count": 25,
+    "avg_realism": 0.86,
+    "avg_intent_fit": 0.847,
+    "realism_buckets": {
+      "high_>=0.7": 24,
+      "mid_0.4-0.7": 0,
+      "low_<0.4": 1
+    },
+    "intent_distribution": {
+      "JobRoleResponsibilites": 6,
+      "WorkingCulture": 4,
+      "NextSteps": 4,
+      "Technologies": 3,
+      "CompanyGrowthOpportunity": 3,
+      "ModeOfWorking": 2,
+      "ProductsAndServices": 1,
+      "CompanyGoals": 1,
+      "Other": 1
+    },
+    "flag_counts": {
+      "company_trivia": 8
+    },
+    "flagged_questions": 8
+  },
+  "results": [
+    {
+      "index": 0,
+      "question": "What kinds of features would I be expected to design, develop, test, and maintain for IBM products or client-facing platforms?",
+      "realism": 0.93,
+      "reason": "A natural question about day-to-day responsibilities and scope of work.",
+      "best_intent": "JobRoleResponsibilites",
+      "intent_fit": 0.97,
+      "flags": [
+        "company_trivia"
+      ]
+    },
+    {
+      "index": 1,
+      "question": "How closely does this role need to follow IBM's SRE and reliability practices in practice?",
+      "realism": 0.82,
+      "reason": "A candidate could naturally ask how tightly the role adheres to a company\u2019s engineering practices.",
+      "best_intent": "Technologies",
+      "intent_fit": 0.72,
+      "flags": []
+    },
+    {
+      "index": 2,
+      "question": "Will this role include participating in code reviews as part of the day-to-day engineering work?",
+      "realism": 0.96,
+      "reason": "A natural question about day-to-day responsibilities in an engineering role.",
+      "best_intent": "JobRoleResponsibilites",
+      "intent_fit": 0.98,
+      "flags": []
+    },
+    {
+      "index": 3,
+      "question": "How important is collaboration in this role, especially in cross-functional and cross-geography teams?",
+      "realism": 0.96,
+      "reason": "A natural question about teamwork and working style that many candidates ask.",
+      "best_intent": "WorkingCulture",
+      "intent_fit": 0.9,
+      "flags": []
+    },
+    {
+      "index": 4,
+      "question": "Could this role be based in one of IBM\u2019s development centres, and would it follow that location\u2019s hybrid-working policy?",
+      "realism": 0.78,
+      "reason": "A plausible candidate question about location and working arrangement, though the company-specific phrasing makes it slightly less natural.",
+      "best_intent": "ModeOfWorking",
+      "intent_fit": 0.88,
+      "flags": [
+        "company_trivia"
+      ]
+    },
+    {
+      "index": 5,
+      "question": "What kinds of projects could I expect to work on in areas like responsible AI, quantum computing, hybrid cloud, or open-source software?",
+      "realism": 0.74,
+      "reason": "A candidate might reasonably ask about project types, though the specific list feels a bit broad and buzzword-heavy.",
+      "best_intent": "JobRoleResponsibilites",
+      "intent_fit": 0.81,
+      "flags": []
+    },
+    {
+      "index": 6,
+      "question": "In this Software Engineer role, how much time is typically spent designing versus building and evolving products and platforms?",
+      "realism": 0.93,
+      "reason": "A natural question about the balance of responsibilities in the role.",
+      "best_intent": "JobRoleResponsibilites",
+      "intent_fit": 0.96,
+      "flags": []
+    },
+    {
+      "index": 7,
+      "question": "How important is a solid understanding of data structures, algorithms, object-oriented design, and software engineering fundamentals for success in this position?",
+      "realism": 0.82,
+      "reason": "A candidate could plausibly ask this to gauge role expectations, though it is somewhat generic and interview-y.",
+      "best_intent": "JobRoleResponsibilites",
+      "intent_fit": 0.74,
+      "flags": []
+    },
+    {
+      "index": 8,
+      "question": "How are security, privacy, compliance, and Responsible AI guidelines enforced throughout the software lifecycle on this team?",
+      "realism": 0.9,
+      "reason": "A strong, natural question about team practices and standards in a technical interview.",
+      "best_intent": "Technologies",
+      "intent_fit": 0.72,
+      "flags": []
+    },
+    {
+      "index": 9,
+      "question": "How do internal mobility, mentorship, and IBM's continuous-learning programs help IBMers move across products, technologies, and geographies?",
+      "realism": 0.83,
+      "reason": "A thoughtful candidate could ask about career growth and internal mobility at the end of an interview.",
+      "best_intent": "CompanyGrowthOpportunity",
+      "intent_fit": 0.91,
+      "flags": [
+        "company_trivia"
+      ]
+    },
+    {
+      "index": 10,
+      "question": "How are flexible or hybrid working arrangements supported with clear expectations here?",
+      "realism": 0.96,
+      "reason": "A natural question about working arrangements and expectations.",
+      "best_intent": "ModeOfWorking",
+      "intent_fit": 0.92,
+      "flags": []
+    },
+    {
+      "index": 11,
+      "question": "How do you expect engineers in this role to communicate complex ideas to both technical and non-technical audiences?",
+      "realism": 0.95,
+      "reason": "A natural question about communication expectations for the role.",
+      "best_intent": "JobRoleResponsibilites",
+      "intent_fit": 0.78,
+      "flags": []
+    },
+    {
+      "index": 12,
+      "question": "Is hands-on experience with containers and orchestration tools like Docker, Kubernetes, or Red Hat OpenShift a preferred qualification here?",
+      "realism": 0.93,
+      "reason": "A natural question about role-specific technical requirements and preferences.",
+      "best_intent": "Technologies",
+      "intent_fit": 0.98,
+      "flags": []
+    },
+    {
+      "index": 13,
+      "question": "How does the client-first mindset show up in day-to-day work on this team?",
+      "realism": 0.93,
+      "reason": "A natural question about team culture and priorities that a real candidate might ask.",
+      "best_intent": "WorkingCulture",
+      "intent_fit": 0.84,
+      "flags": []
+    },
+    {
+      "index": 14,
+      "question": "Can you share an example of how the software in this role has delivered real business value to enterprise clients?",
+      "realism": 0.93,
+      "reason": "This is a natural, thoughtful question about the role\u2019s impact and customers.",
+      "best_intent": "ProductsAndServices",
+      "intent_fit": 0.84,
+      "flags": []
+    },
+    {
+      "index": 15,
+      "question": "How do IBM's core beliefs around trust and personal responsibility show up in day-to-day relationships and teamwork?",
+      "realism": 0.78,
+      "reason": "It is a natural culture-focused question, though the wording is somewhat corporate and abstract.",
+      "best_intent": "WorkingCulture",
+      "intent_fit": 0.91,
+      "flags": [
+        "company_trivia"
+      ]
+    },
+    {
+      "index": 16,
+      "question": "Does IBM provide opportunities for people to build the next chapter of their career inside the company?",
+      "realism": 0.74,
+      "reason": "A candidate might reasonably ask about internal growth, though the wording is a bit promotional.",
+      "best_intent": "CompanyGrowthOpportunity",
+      "intent_fit": 0.93,
+      "flags": [
+        "company_trivia"
+      ]
+    },
+    {
+      "index": 17,
+      "question": "How often do IBMers collaborate across time zones, research labs, consulting engagements, and client sites?",
+      "realism": 0.9,
+      "reason": "It is a natural question about collaboration patterns and work style at the company.",
+      "best_intent": "WorkingCulture",
+      "intent_fit": 0.82,
+      "flags": [
+        "company_trivia"
+      ]
+    },
+    {
+      "index": 18,
+      "question": "IBM emphasizes innovation that matters for the company and for the world\u2014how does that principle influence the work on this team?",
+      "realism": 0.78,
+      "reason": "This is a plausible, thoughtful question, though it is a bit company-slogan driven.",
+      "best_intent": "CompanyGoals",
+      "intent_fit": 0.86,
+      "flags": [
+        "company_trivia"
+      ]
+    },
+    {
+      "index": 19,
+      "question": "If I\u2019m not selected for this role, would I still be able to apply for other roles at IBM in the future?",
+      "realism": 0.96,
+      "reason": "A natural and common question about future opportunities at the company.",
+      "best_intent": "CompanyGrowthOpportunity",
+      "intent_fit": 0.72,
+      "flags": [
+        "company_trivia"
+      ]
+    },
+    {
+      "index": 20,
+      "question": "If my profile matches the role, will a recruiter reach out to schedule assessments or interviews?",
+      "realism": 0.96,
+      "reason": "A natural question about the hiring process and next steps.",
+      "best_intent": "NextSteps",
+      "intent_fit": 0.97,
+      "flags": []
+    },
+    {
+      "index": 21,
+      "question": "Will I receive email updates from IBM\u2019s recruitment system and be able to check my status in the candidate portal?",
+      "realism": 0.88,
+      "reason": "A candidate could reasonably ask about application status updates and portal access.",
+      "best_intent": "NextSteps",
+      "intent_fit": 0.84,
+      "flags": []
+    },
+    {
+      "index": 22,
+      "question": "What can I do in the candidate portal besides reviewing applications and tracking status?",
+      "realism": 0.2,
+      "reason": "This sounds more like an applicant-support question than an end-of-interview question.",
+      "best_intent": "Other",
+      "intent_fit": 0.2,
+      "flags": []
+    },
+    {
+      "index": 23,
+      "question": "What should I expect from the interview process in terms of speaking with recruiters, hiring managers, and technical panels?",
+      "realism": 0.96,
+      "reason": "A very common and natural question about the hiring process.",
+      "best_intent": "NextSteps",
+      "intent_fit": 0.98,
+      "flags": []
+    },
+    {
+      "index": 24,
+      "question": "Could you walk me through the core steps of the application process from the online application through to a formal offer?",
+      "realism": 0.98,
+      "reason": "A very natural question about the hiring timeline and process.",
+      "best_intent": "NextSteps",
+      "intent_fit": 0.99,
+      "flags": []
+    }
+  ]
+}
